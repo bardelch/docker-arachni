@@ -6,5 +6,4 @@ function randpw()
 	cat /dev/urandom | tr -dc [:alnum:] | head -c16; echo
 }
 
-result=$(randpw)
-echo $result
+echo POSTGRES_PASS=$(randpw) > passwords.txt
