@@ -5,8 +5,7 @@ then
 	./setup.sh
 fi
 
-docker stop postgres
-docker stop arachni
+./stopDockerImages.sh
 ./cleanImages.sh
 
 #source passwords.txt
