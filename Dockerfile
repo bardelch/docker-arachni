@@ -1,13 +1,13 @@
 FROM debian:latest
 
-MAINTAINER treadie.io
+MAINTAINER bardelch
 
 ENV VERSION_FRAMEWORK 1.5.1
 ENV VERSION_WEBUI 0.5.12
 ENV POSTGRES_HOST postgres
-ENV POSTGRES_DATABASE arachni_production
-ENV POSTGRES_USERNAME arachni
-ENV POSTGRES_PASSWORD secret
+#ENV POSTGRES_DATABASE arachni_dev
+#ENV POSTGRES_USERNAME arachni
+#ENV POSTGRES_PASSWORD $POSTGRES_PASSWORD
 ENV PATH /opt/arachni/bin:$PATH
 
 RUN apt-get update && apt-get install -y curl

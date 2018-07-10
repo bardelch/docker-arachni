@@ -20,27 +20,27 @@ development:
   host: <%= ENV['POSTGRES_HOST'] %>
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['POSTGRES_DATABASE'] %>
+  database: <%= ENV['POSTGRES_DB'] %>
   pool: 50
-  username: <%= ENV['POSTGRES_USERNAME'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 test: &test
   host: <%= ENV['POSTGRES_HOST'] %>
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['POSTGRES_DATABASE'] %>
+  database: <%= ENV['POSTGRES_DB'] %>
   pool: 50
-  username: <%= ENV['POSTGRES_USERNAME'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 production:
   host: <%= ENV['POSTGRES_HOST'] %>
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['POSTGRES_DATABASE'] %>
+  database: <%= ENV['POSTGRES_DB'] %>
   pool: 50
-  username: <%= ENV['POSTGRES_USERNAME'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 cucumber:
