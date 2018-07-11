@@ -9,15 +9,13 @@ function randpw()
 	cat /dev/urandom | tr -dc [:alnum:] | head -c16; echo
 }
 
-#arachni vars in yaml
-#echo POSTGRES_PASSWORD=$(randpw) > password.txt
-#echo POSTGRES_DATABASE=arachni_dev >> password.txt
-#echo POSTGRES_USERNAME=arachni >> password.txt
-
 #postgres
 echo POSTGRES_PASSWORD=$(randpw) > password.txt
-echo POSTGRES_USER=arachni arachni_dev >> password.txt
+echo POSTGRES_USER=arachni >> password.txt
 echo POSTGRES_DB=arachni_dev >> password.txt
+
+chmod 700 password.txt
+#change name of file
 
 docker build -t "bardelch/arachni" .
 docker history bardelch/arachni
